@@ -3,21 +3,36 @@
 
 import pyperclip
 
-# The string to be encrypted/decrypted:
-original_message = input('Please input a message: \n')
 
+# Global variables
 # The ecryption/decryption key
 KEY = 13
-
-# Whether the program encrypts or decrypts
-mode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
-
 # Every possible symbol that can be encrypted: 
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
 
-# store the encrypted/decrypted form of the message:
+print('''
+
+░█▀▀░█▀█░█▀▀░█▀▀░▀█▀░█▀▀░█▄█░█▀█
+░█░░░█▀█░█▀▀░▀▀█░░█░░█░█░█░█░█▀█
+░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀░▀
+
+Welcome to the Caesigma Machine.''')
+
+# Choose whether the program encrypts or decrypts
+mode_sel = input('Would you like to encrypt (E) or decrypt (D): ' )
+if mode_sel == 'E' or mode_sel == 'e':
+    mode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
+elif mode_sel == 'D' or mode_sel == 'd':
+     mode = 'decrypt'
+
+# The string to be encrypted/decrypted:
+original_message = input('Please input a message: \n')
+
+
+# Store the encrypted/decrypted form of the message:
 new_message = ''
 
+# Shift characters and add to the new message
 for symbol in original_message:
         # Note: Only symbols within the the SYMBOLS string can be encrypted/decrypted.
         if symbol in SYMBOLS:
@@ -29,7 +44,7 @@ for symbol in original_message:
             elif mode =='decrypt':
                  translatedIndex = symbolIndex - KEY
             
-            # Handle wraparound if needed
+            # Handle wraparound, if needed
             if translatedIndex >= len(SYMBOLS):
                  translatedIndex = translatedIndex - len(SYMBOLS)
             elif translatedIndex < 0:
