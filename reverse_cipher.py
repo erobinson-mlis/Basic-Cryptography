@@ -1,18 +1,23 @@
 # Reverse Cipher
-# https://www.nostarh.crackingcodes/ (BSD Licensed)
+# adapted from https://www.nostarh.crackingcodes/ (used under BSD License)
 
 import os
 
-message = input('Please enter a message you would like to encrypt: \n')
+original_message = input('Please enter a message you would like to encrypt: \n')
 
-translated = ''
+new_message = ''
 
-i = len(message) -1
+i = len(original_message) -1
 while i >= 0:
-    translated = translated + message[i]
-    print(translated)
+    new_message = new_message + original_message[i]
+    
+    # uncomment this line to view the substitution character by character.
+    #print(new_message)  
+    
     i = i - 1
 
-#os.system('clear')
-print(f'Your encrypted/decrypted message is below.\n{translated}\n')
+# comment out this line retain the original message on the screen after processing.
+os.system('clear')       
+
+print(f'\nYour encrypted/decrypted message is below.\n\n{new_message}\n')
 
