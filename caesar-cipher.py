@@ -6,7 +6,7 @@ import pyperclip as pc
 
 # Global variables
 # The ecryption/decryption key
-KEY = 13
+KEY = 17
 # Every acceptable symbol that can be encrypted: 
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz1234567890!?.`~@#$%^&*()_+-=[]|;:<>,/'
 
