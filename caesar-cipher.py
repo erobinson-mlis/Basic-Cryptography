@@ -8,7 +8,7 @@ import pyperclip as pc
 # The ecryption/decryption key
 KEY = 13
 # Every possible symbol that can be encrypted: 
-SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh ijklmnopqrstuvwxyz123456789067890!?.`~@#$%^&*()_+-=[]|;:<>,/'
+SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz1234567890!?.`~@#$%^&*()_+-=[]|;:<>,/'
 
 print('''
 
