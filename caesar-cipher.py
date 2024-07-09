@@ -1,4 +1,5 @@
 # Caesar Cipher
+# remixer: Eric Robinson released under BSD Open License
 # adapted from Al Sweigart https://www.nostarch.com/crackingcodes/ (used under BSD License)
 
 import os
