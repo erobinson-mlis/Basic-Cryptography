@@ -1,6 +1,7 @@
 # Caesar Cipher Hacker
-# Adapted from https://www.nostarch.com/crackingcodes/ (BSD Licensed)
-# by Eric Robinson (BSD Licensed)
+# Adapted from Sweigart, *Cracking Codes with Python* 
+# https://www.nostarch.com/crackingcodes/ (BSD Licensed)
+# Modified by Eric Robinson (shared under BSD License)
 
 
 import time
