@@ -21,7 +21,9 @@ for key in range(len(SYMBOLS)):
     # Loop through each symbol in the message
     for symbol in message: 
         if symbol in SYMBOLS:
+            # returns the position index in the SYMBOLS list
             symbolIndex = SYMBOLS.find(symbol)
+            # shifts character in the list by the value of the key
             translatedIndex = symbolIndex - key
 
             # handle the wraparound
