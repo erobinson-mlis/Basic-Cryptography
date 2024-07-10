@@ -2,6 +2,10 @@
 # Adapted from https://www.nostarch.com/crackingcodes/ (BSD Licensed)
 # by Eric Robinson (BSD Licensed)
 
+
+import time
+
+
 message = input(f"Please input an encoded message to cryptanalyze: \n")
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?.`~@#$%^&*()_+-=[]|;:<>,/ '
 
@@ -32,3 +36,4 @@ for key in range(len(SYMBOLS)):
         
     # Display decryption for each key' value
     print('Key #%s: %s' %(key, translated))
+    time.sleep(0.4)
