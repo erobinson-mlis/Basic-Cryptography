@@ -3,7 +3,7 @@
 # by Eric Robinson (BSD Licensed)
 
 message = input(f"Please input an encoded message to cryptanalyze: \n")
-SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
+SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?.`~@#$%^&*()_+-=[]|;:<>,/ '
 
 # Loop through every possible key:
 for key in range(len(SYMBOLS)):
