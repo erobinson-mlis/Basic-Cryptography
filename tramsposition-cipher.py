@@ -9,7 +9,7 @@ import pyperclip
 
 def main():
     myMessage = input('Please enter a message to encrypt suing the transposition cipher:\n')
-    myKey = 8
+    myKey = 5
 
     ciphertext = encryptMessage(myKey, myMessage)
 
@@ -35,14 +35,14 @@ def encryptMessage(key, message):
             # Place the character at the currentIndex into the message 
             # at the end of the current column in the ciphertext list. 
             ciphertext[column] += message[currentIndex]
-
             # Move currentIndex over one position
             currentIndex += key
     
     # Convert the ciphertext list into a single string value and return it.
+
     return ''.join(ciphertext)
 
-# If transpositionEncrypt.py is run (instead of imported as a module) call
-# the main function
+# If transpositionEncrypt.py is run (instead of imported as a module), 
+# call the main function
 if __name__== '__main__':
     main()
