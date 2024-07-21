@@ -9,7 +9,7 @@ import pyperclip
 
 def main():
     myMessage = input('Please enter a message to encrypt suing the transposition cipher:\n')
-    myKey = 5
+    myKey = int(input('Please enter the transposition key you would like to use: '))
 
     ciphertext = encryptMessage(myKey, myMessage)
 

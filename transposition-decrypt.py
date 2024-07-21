@@ -1,12 +1,13 @@
 # Transposition Cipher Decryption
 # https://www.nostarch.com/crackingcodes/ (BSD Licensed)
 
-import math, pyperclip
+import math
+import pyperclip
 
 def main():
     # Input the encoded message and the decryption key. 
-    myMessage = input("Please enter a message to be decrypted: ")
-    myKey = int(input("Please enter the secret decoding key: "))
+    myMessage = input("Please enter a message to be decrypted:\n")
+    myKey = int(input("Please enter the transposition key: "))
 
     plaintext = decryptMessage(myKey, myMessage)
 
