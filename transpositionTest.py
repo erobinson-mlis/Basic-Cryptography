@@ -6,7 +6,7 @@
 import random, sys, transpositionEncrypt,transpositionDecrypt
 
 def main():
-    random.seed(3) # Set the random "seed" to a static value.
+    random.seed(42) # Set the random "seed" to a static value.
 
     for i in range(100):     # Run 20 tests.
         # Generate random messages to test
