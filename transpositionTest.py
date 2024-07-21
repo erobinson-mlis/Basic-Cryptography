@@ -29,7 +29,7 @@ def main():
             # If the decryption doesn't match the original message,
             # then display an error message and quit
             if message != decrypted:
-                print('Mismatch with key %s and message %s' % (key, message))
+                print(f'Mismatch with key %s and message %s' % (key, message))
                 print('Decrypted as: ' + decrypted)
                 sys.exit()
 
