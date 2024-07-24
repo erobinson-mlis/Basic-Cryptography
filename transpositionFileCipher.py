@@ -4,12 +4,12 @@
 import time, os, sys, transpositionEncrypt, transpositionDecrypt
 
 def main():
-    inputFilename = 'frankenstein.encrypted.txt'
+    inputFilename = 'the_time_machine.encrypted2.txt'
 
     # BE CAREFUL! If a file with the outputFilename name already exists,
     # this program will overwrite that file:
-    outputFilename = 'the_time_machine.2.txt'
-    myKey = 10
+    outputFilename = 'the_time_machine2.txt'
+    myKey = 22
     myMode = 'decrypt' # Set to 'encrypt' or 'decrypt'.
     
     # If the input file does not exist, the program terminates early:
