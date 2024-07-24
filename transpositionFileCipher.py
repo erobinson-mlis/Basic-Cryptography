@@ -4,12 +4,12 @@
 import time, os, sys, transpositionEncrypt, transpositionDecrypt
 
 def main():
-    inputFilename = 'the_time_machine.encrypted2.txt'
+    inputFilename = 'the_time_machine.encrypted.txt'
 
     # BE CAREFUL! If a file with the outputFilename name already exists,
     # this program will overwrite that file:
-    outputFilename = 'the_time_machine2.txt'
-    myKey = 22
+    outputFilename = 'the_time_machine.3.txt'
+    myKey = 15
     myMode = 'decrypt' # Set to 'encrypt' or 'decrypt'.
     
     # If the input file does not exist, the program terminates early:
@@ -26,10 +26,9 @@ def main():
             sys.exit()
     
     # Read in the message from the input file:
-    fileObj = open(inputFilename)
-    content = fileObj.read()
-    fileObj.close()
-
+    with open(inputFilename, 'r') as fileObj:
+        content = fileObj.read()
+    
     print('%sing...' % (myMode.title()))
 
     # Measure how long the encryption/decryption takes:
