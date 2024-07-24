@@ -31,19 +31,19 @@ def main():
     
     print('%sing...' % (myMode.title()))
 
-    # Measure how long the encryption/decryption takes:
+    # Measure how long the 
+    # cencryption/decryption takes:
     startTime = time.time()
     if myMode == 'encrypt':
         translated = transpositionEncrypt.encryptMessage(myKey, content)
     elif myMode == 'decrypt':
         translated = transpositionDecrypt.decryptMessage(myKey, content)
-    totalTime = round(time.time() - startTime, 2)
+    totalTime = round(time.time() - startTime, 4)
     print('%sion time: %s seconds' % (myMode.title(), totalTime))
 
     # Write out the translated message to the output file:
-    outputFileObj = open(outputFilename, 'w')
-    outputFileObj.write(translated)
-    outputFileObj.close()
+    with open(outputFilename, 'w') as outputFileObj:
+        outputFileObj.write(translated)
     
     print('Done %sing %s (%s characters).' % (myMode, inputFilename, len(content)))
     print('%sed file is %s.' % (myMode.title(), outputFilename))
